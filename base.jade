@@ -1,0 +1,27 @@
+html
+	head
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title
+			block title
+				site.title
+		load("/template/style.scss")
+	body
+		.header-wrap
+			.header.center-container
+				a.logo(href='/')= site.title
+				.links
+					a(href="/archive") archive
+					a(href="http://wiki.ifanan.com", target="_blank") wiki
+					if has('about.md')
+						a(href="/about.md") about
+		.content-wrap
+			.content.center-container
+				block content
+
+		.footer-wrap
+			.main-center.footer
+				p Copyright 2014 Frank Fu. All rights reserved.
+					| Themed by
+					a(href="http://copri.me") Jaden Wang.
+					| Powered by
+					a(href="https://www.farbox.com") farbox.com					
